@@ -62,10 +62,20 @@ function Population() {
 
   // Calls for update and show functions
   this.run = function() {
+    var stale = true;
     for (var i = 0; i < this.popsize; i++) {
       this.rockets[i].update();
       // Displays rockets to screen
       this.rockets[i].show();
+      // Check if rocket is still moving
+      if (!this.rockets[i].completed && !this.rockets[i].crashed) {
+        var stale = false;
+      }
     }
+    // If no rockets moving, return false
+    if (stale) {
+      return false;
+    }
+    return true;
   }
 }

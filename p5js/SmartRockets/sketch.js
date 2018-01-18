@@ -31,12 +31,16 @@ function setup() {
 
 function draw() {
   background(0);
-  population.run();
+  var ended = false;
+  // run returns false if all rockets have stopped
+  if (!population.run()) {
+    ended = true;
+  }
   // Displays count to window
   lifeP.html(count);
 
   count++;
-  if (count == lifespan) {
+  if (count == lifespan || ended) {
     population.evaluate();
     population.selection();
     // Population = new Population();
