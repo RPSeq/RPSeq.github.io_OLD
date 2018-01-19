@@ -5,7 +5,7 @@
 
 var population;
 // Each rocket is alive till 400 frames
-var lifespan = 400;
+var lifespan = 800;
 // Made to display count on screen
 var lifeP;
 // Keeps track of frames
@@ -16,13 +16,13 @@ var target;
 var maxforce = 0.2;
 
 // Dimensions of barrier
-var rx = 100;
-var ry = 150;
-var rw = 200;
+var rx = 200;
+var ry = 300;
+var rw = 400;
 var rh = 10;
 
 function setup() {
-  createCanvas(400, 300);
+  createCanvas(800, 600);
   population = new Population();
   lifeP = createP();
   target = createVector(width / 2, 50);

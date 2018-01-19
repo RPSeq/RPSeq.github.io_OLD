@@ -7,7 +7,7 @@ function Population() {
   // Array of rockets
   this.rockets = [];
   // Amount of rockets
-  this.popsize = 25;
+  this.popsize = 250;
   // Amount parent rocket partners
   this.matingpool = [];
 
@@ -24,20 +24,20 @@ function Population() {
       // Calculates fitness
       this.rockets[i].calcFitness();
       // If current fitness is greater than max, then make max eqaul to current
-      if (this.rockets[i].fitness > maxfit) {
-        maxfit = this.rockets[i].fitness;
+      if (this.rockets[i].maxfitness > maxfit) {
+        maxfit = this.rockets[i].maxfitness;
       }
     }
     // Normalises fitnesses
-    for (var i = 0; i < this.popsize; i++) {
-      this.rockets[i].fitness /= maxfit;
-    }
+    // for (var i = 0; i < this.popsize; i++) {
+    //   this.rockets[i].maxfitness /= maxfit;
+    // }
 
     this.matingpool = [];
     // Take rockets fitness make in to scale of 1 to 100
     // A rocket with high fitness will highly likely will be in the mating pool
     for (var i = 0; i < this.popsize; i++) {
-      var n = this.rockets[i].fitness * 100;
+      var n = this.rockets[i].maxfitness * 100;
       for (var j = 0; j < n; j++) {
         this.matingpool.push(this.rockets[i]);
       }

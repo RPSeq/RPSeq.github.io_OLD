@@ -20,6 +20,10 @@ function Rocket(dna) {
     this.dna = new DNA();
   }
   this.fitness = 0;
+  this.maxfitness = 0
+
+  //counts cycles since rocket launch
+  this.count = 0;
 
   // Object can recieve force and add to acceleration
   this.applyForce = function(force) {
@@ -27,23 +31,33 @@ function Rocket(dna) {
   }
   // Calulates fitness of rocket
   this.calcFitness = function() {
-    // Takes distance to target
-    var d = dist(this.pos.x, this.pos.y, target.x, target.y);
 
-    // Maps range of fitness
-    this.fitness = map(d, 0, width, width, 0);
     // If rocket gets to target increase fitness of rocket
     if (this.completed) {
-      this.fitness *= 10;
+      this.maxfitness *= 10000/this.count;
     }
     // If rocket does not get to target decrease fitness
     if (this.crashed) {
-      this.fitness /= 10;
+      this.maxfitness /= 100;
+    }
+    else {
+      this.maxfitness /= 75;
     }
 
   }
   // Updates state of rocket
   this.update = function() {
+    this.count++;
+
+    // Takes distance to target
+    var d = dist(this.pos.x, this.pos.y, target.x, target.y);
+
+    // Maps range of fitness
+    this.fitness = map(d, 0, width, width, 0);
+
+    if (this.fitness > this.maxfitness) {
+      this.maxfitness = this.fitness;
+    }
     // Checks distance from rocket to target
     var d = dist(this.pos.x, this.pos.y, target.x, target.y);
     // If distance less than 10 pixels, then it has reached target
