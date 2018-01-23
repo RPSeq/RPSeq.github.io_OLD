@@ -35,7 +35,7 @@ function Rocket(dna) {
 
     // If rocket gets to target increase fitness of rocket
     if (this.completed) {
-      this.maxfitness *= 10000/this.count;
+      this.maxfitness *= 80000000/(this.count^2);
     }
     // If rocket does not get to target decrease fitness
     if (this.crashed) {
@@ -56,6 +56,7 @@ function Rocket(dna) {
     // Maps range of fitness
     this.fitness = map(this.d, 0, width, width, 0);
 
+    // Check if greater than maxfitness
     if (this.fitness > this.maxfitness) {
       this.maxfitness = this.fitness;
     }
@@ -80,7 +81,7 @@ function Rocket(dna) {
 
 
     //applies the random vectors defined in dna to consecutive frames of rocket
-    this.applyForce(this.dna.genes[count]);
+    this.applyForce(this.dna.genes[this.count]);
     // if rocket has not got to goal and not crashed then update physics engine
     if (!this.completed && !this.crashed) {
       this.vel.add(this.acc);
@@ -95,8 +96,7 @@ function Rocket(dna) {
     push();
     //color customization of rockets
     noStroke();
-
-    fill(255, 255-map(log(this.d), 2.3, 7, 60, 255));
+    fill(255, 255-map(log(this.d), 2.3, 10, 60, 255));
     //translate to the postion of rocket
     translate(this.pos.x, this.pos.y);
     //rotatates to the angle the rocket is pointing

@@ -28,7 +28,7 @@ function setup() {
   target = createVector(width / 2, 50);
 
   // create sliders
-  frameSlider = createSlider(0, 10, 0);
+  frameSlider = createSlider(0, 100, 0);
   frameSlider.position(20, 20);
 
 }
@@ -37,13 +37,18 @@ function draw() {
   background(0);
   var ended = false;
   var frameskip = frameSlider.value();
+  var frames = 0;
 
 
   // run without rendering for frameskip
   for (var i = 0; i < frameskip+1; i++) {
+    var toRender = false
+    if (i === frameskip) {
+      toRender = true
+    }
     // run returns false if all rockets have stopped
     count++;
-    if (!population.run()) {
+    if (!population.run(toRender) || count >= lifespan) {
       ended = true;
       break;
     }
