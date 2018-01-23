@@ -20,7 +20,8 @@ function Rocket(dna) {
     this.dna = new DNA();
   }
   this.fitness = 0;
-  this.maxfitness = 0
+  this.maxfitness = 0;
+  this.d = 0;
 
   //counts cycles since rocket launch
   this.count = 0;
@@ -50,18 +51,17 @@ function Rocket(dna) {
     this.count++;
 
     // Takes distance to target
-    var d = dist(this.pos.x, this.pos.y, target.x, target.y);
+    this.d = dist(this.pos.x, this.pos.y, target.x, target.y);
 
     // Maps range of fitness
-    this.fitness = map(d, 0, width, width, 0);
+    this.fitness = map(this.d, 0, width, width, 0);
 
     if (this.fitness > this.maxfitness) {
       this.maxfitness = this.fitness;
     }
-    // Checks distance from rocket to target
-    var d = dist(this.pos.x, this.pos.y, target.x, target.y);
+
     // If distance less than 10 pixels, then it has reached target
-    if (d < 10) {
+    if (this.d < 10) {
       this.completed = true;
       this.pos = target.copy();
     }
@@ -95,7 +95,8 @@ function Rocket(dna) {
     push();
     //color customization of rockets
     noStroke();
-    fill(255, 150);
+
+    fill(255, 255-map(log(this.d), 2.3, 7, 60, 255));
     //translate to the postion of rocket
     translate(this.pos.x, this.pos.y);
     //rotatates to the angle the rocket is pointing
@@ -105,5 +106,4 @@ function Rocket(dna) {
     rect(0, 0, 25, 5);
     pop();
   }
-
 }

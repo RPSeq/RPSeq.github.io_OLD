@@ -27,20 +27,33 @@ function setup() {
   lifeP = createP();
   target = createVector(width / 2, 50);
 
+  // create sliders
+  frameSlider = createSlider(0, 10, 0);
+  frameSlider.position(20, 20);
+
 }
 
 function draw() {
   background(0);
   var ended = false;
-  // run returns false if all rockets have stopped
-  if (!population.run()) {
-    ended = true;
+  var frameskip = frameSlider.value();
+
+
+  // run without rendering for frameskip
+  for (var i = 0; i < frameskip+1; i++) {
+    // run returns false if all rockets have stopped
+    count++;
+    if (!population.run()) {
+      ended = true;
+      break;
+    }
   }
+
   // Displays count to window
   lifeP.html(count);
 
-  count++;
-  if (count == lifespan || ended) {
+
+  if (count >= lifespan || ended) {
     population.evaluate();
     population.selection();
     // Population = new Population();
