@@ -35,14 +35,11 @@ function Rocket(dna) {
 
     // If rocket gets to target increase fitness of rocket
     if (this.completed) {
-      this.maxfitness *= 80000000/(this.count^2);
+      this.fitness *= (100+map(this.count, 0, lifespan, 0, 10));
     }
     // If rocket does not get to target decrease fitness
     if (this.crashed) {
-      this.maxfitness /= 100;
-    }
-    else {
-      this.maxfitness /= 75;
+      this.fitness /= (10+map(this.count, 0, lifespan, 0, 10));
     }
 
   }
@@ -56,10 +53,10 @@ function Rocket(dna) {
     // Maps range of fitness
     this.fitness = map(this.d, 0, width, width, 0);
 
-    // Check if greater than maxfitness
-    if (this.fitness > this.maxfitness) {
-      this.maxfitness = this.fitness;
-    }
+    // // Check if greater than maxfitness
+    // if (this.fitness > this.maxfitness) {
+    //   this.maxfitness = this.fitness;
+    // }
 
     // If distance less than 10 pixels, then it has reached target
     if (this.d < 10) {
@@ -96,7 +93,7 @@ function Rocket(dna) {
     push();
     //color customization of rockets
     noStroke();
-    fill(255, 255-map(log(this.d), 2.3, 10, 60, 255));
+    fill(255, 255-map(log(this.d), 5, 10, 60, 255));
     //translate to the postion of rocket
     translate(this.pos.x, this.pos.y);
     //rotatates to the angle the rocket is pointing
