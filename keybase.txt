@@ -1,0 +1,75 @@
+==================================================================
+https://keybase.io/rpseq
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://rpseq.github.io
+  * I am rpseq (https://keybase.io/rpseq) on keybase.
+  * I have a public key with fingerprint EC4F EDA7 E2E9 09E9 E4B2  8CA4 B836 B93C 00D2 15C9
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01207e4e8b6c2948bc80f392081414d79cae0ed5212488f5b038228a6a10da22d79e0a",
+      "fingerprint": "ec4feda7e2e909e9e4b28ca4b836b93c00d215c9",
+      "host": "keybase.io",
+      "key_id": "b836b93c00d215c9",
+      "kid": "0101baa7ad0160a132fffca6a97aee3949156d44f2e5489f629ba4a7055efda7f89d0a",
+      "uid": "4307857588124a3be9f0060d81fbbc19",
+      "username": "rpseq"
+    },
+    "service": {
+      "hostname": "rpseq.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1518596690,
+  "expire_in": 157680000,
+  "prev": "15f9203971148465587d7da51b0c6126eafbf23ec71b207381703b3bd1fadcf0",
+  "seqno": 16,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.76
+Comment: https://keybase.io/crypto
+
+yMNtAnicbVJtUFRVGN5FREO+zGFakM87jpNFes79PBeRxJlMTfKjcs3Bdu/HubsX
+ZXfZuyzgusgEijQpP4CKDx0anElklFGmQMriawSGjIoMNicGc6iwMhInGceku5Qz
+/ej8OXPe93mf93ne9/RHLjKEGzvZyxmGr2OHjMM97xUY9pXd3e0jRKdcTKT7iAN4
+4cIHZax5LAdUmUgnACQBh2mMRFYieRqJEgIKxZMAQRrSMsdLAgZYZkhI0ggpjAgo
+RJJIYAUIZIEkdQQGApFGKKrDht0ut+rw6LRYohUsCxwmMQ94zGNaJJEk0CKiWJGn
+JABkEjISrxfanVqwQhcnChpeqzr1mP6wLMj7H/xj3QCKgsAJMoAsECBFKooi6bJ4
+TsCY4mkeMqxM0wqJGRrxCkvyokALHGAYrOjCFMTLC7oLFuhoCnCI4RiEdJ8CJWJe
+AYAFMoKKKEow2LdAw26HkId1tNul4XzCn0boIa8q4eBUgzb+m15rUz32AvEfPy63
+0+OUnAf1pN3jcWnpwWJPsSuILsSi5V8ei6g6ZH2OeoUXuzXV6SDSoY6UPGqQGDIQ
+MTzL8iCNwEUu1Y0tahDBcCwC+gn2wV6dEjKKvkGK5yCkEc0yDOJkThYYKAKJhSSL
+BUVUSApLHBT19VMIcoASKVGGiiBLCiCCzvIdTp2b1XUKNp1TU20OwVPgxoS/tycn
+1GAMN4QtDgl+MEP4EzGPvx11PsZQd6R8fYIvMFiW2H9tsiUvCbsyvx83BrIuzMGG
+koRLqCWnd90zWy21mndGvnX9hQ93BqqqVtw/cWqCDts0mnJ1Y4f92ee+WFJeUVL2
+0cMP4kcdo2lNfRnGXfXf+rmMrlJra+CVuYgRv3nCcnq0Mds6uV+uaHpJ++4HXH94
+LBlkXPFXD1Oz3JvnduLCqDXU5uyWY3d6mEdvDc99eiN2TU1RoTm08nZfwtDqRaaR
+p3yHroMH5olb90JHj65vy9289JctRckPKYlaR51cSS4et99+4DVsYKfw0FKzHIW2
+o0zlWM7HHYlcrXUs79VtFVczVVeTtT+xe+XuufhvPhlbYfxqqvS15rtnl2Rtvbf8
+ZkSKaS/baPZolcvefV7K774c9uudPTa3Off9EdPZiL7XX9yErsyezwo5tC/VG2lC
+zVHR0TUT048ubU99+lxzUszFzPTfwMXcC0On7Un+5gHXSElNx/G8z27U8wklN+1t
+CYOrTGfmp39PPFLzR+Tb1WMzL39+MuXJ/fMDpq7JyeKouNJlYSUzrZ29TSjQvjwt
+MJvz06BPy45tSKYSrznnA9XdZ7aF1NmifW2HvdbaqfLy1Dh/1nTlwK4tJ/gdDT+3
+eUPSQvbMWjfUdY+3xZ/qqvtTau+PyHDGo6rVe482tt4n26t3dL6x8a+ozLpVX74z
++eN8dI6nNC4pmv8b0tK38Q==
+=k3MU
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/rpseq
+
+==================================================================
